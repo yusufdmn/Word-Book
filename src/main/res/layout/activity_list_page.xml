@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListPage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="284dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="467dp"
+        android:text="Word List"
+        android:textAlignment="center"
+        android:textColor="#DFAF20"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="61dp"
+        app:fastScrollEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="74dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        android:onClick="panelF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/panelId"
+        android:layout_width="346dp"
+        android:layout_height="272dp"
+        android:layout_marginTop="60dp"
+        android:background="#EDBB26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="?attr/selectableItemBackgroundBorderless" />
+
+    <EditText
+        android:id="@+id/listNameEditTextId"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="List Name..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/panelId"
+        app:layout_constraintStart_toStartOf="@+id/panelId"
+        app:layout_constraintTop_toTopOf="@+id/panelId" />
+
+    <Button
+        android:id="@+id/AddListButtonId"
+        android:layout_width="174dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="40dp"
+        android:onClick="addListF"
+        android:text="Add"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/panelId"
+        app:layout_constraintStart_toStartOf="@+id/panelId"
+        app:layout_constraintTop_toBottomOf="@+id/listNameEditTextId" />
+
+    <ImageButton
+        android:id="@+id/exitPanelId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="exitF"
+        app:layout_constraintEnd_toEndOf="@+id/panelId"
+        app:layout_constraintTop_toTopOf="@+id/panelId"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
